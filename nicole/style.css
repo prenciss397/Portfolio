@@ -1,0 +1,443 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    background-image: linear-gradient(to bottom right,#8A5082,#FF7B89,#758EB7,#A5CAD2);
+}
+nav{
+    position: fixed;
+    top: 5px;
+    right: 30px;
+}
+.page{
+    height: 100vh;
+}
+
+.home {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 70px 10% 0;
+}
+
+.Home-content {
+    max-width: 600px;
+}
+
+.Home-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.Home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.Home-content p {
+    font-size: 16px;
+    margin: 20px 0 40px;
+}
+.home-imgs {
+    width: 410px;
+    height: 410px;
+}
+
+.home-imgs .glowings-circles {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-imgs .glowings-circles::after {
+    content: '';
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    background-color: #0c1022;
+    border-radius: 50%;
+}
+
+.glowings-circles span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#f06, #3cf);
+    border-radius: 50%;
+}
+
+.glowings-circles .image {
+    position: relative;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.image img {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 350px;
+    object-fit: cover;
+}
+.navbar a.active {
+    background: linear-gradient(45deg, black,rgb(230, 26, 230));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+a{
+    position: relative;
+    display:inline;
+    transition: 0.7s;
+    cursor: pointer;
+}
+a::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 3px;
+    top: 100%;
+    left: 0;
+    transition: 0.5s;
+    transform: scaleX(0);
+    transform-origin: left;
+    background-color: rgb(16, 219, 233);
+}
+a:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+#Project{
+    background-repeat: no-repeat;
+    background-size: 100%;
+    text-shadow: 0 0  10px #d655e2,0 0 20px rgb(230, 140, 222), 0 0 42px rgb(253, 166, 246);
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+}
+#project-img-container{
+    display: grid;
+    height: 609px;
+    grid-template-rows: 70% 30%;
+    grid-template-columns: 34% 33% 33%;
+    grid-template-areas: "pimage1 pimage2 pimage3";
+}
+
+#pr1{
+    grid-area: pimage1;
+    padding: 40px 0px 0px 50px;
+    width: 400px;
+
+}
+
+#pr2{
+    grid-area: pimage2;
+    padding: 40px 0px 0px 45px;
+    width: 395px;
+    
+}
+
+#pr3{
+    grid-area: pimage3;
+    padding: 40px 0px 0px 50px;
+    width: 400px;
+
+}
+
+#project-img-container p{
+    padding: 0px 0 0 50px;
+}
+
+#About{
+    background-repeat: no-repeat;
+    background-size: 100%;
+    text-shadow: 0 0 10px #f08484,0 0 20px rgb(189, 98, 103), 0 0 42px rgb(216, 88, 88);
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+}
+
+
+.about {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 70px 10% 0;
+}
+
+.about-content {
+    max-width: 600px;
+}
+
+.about-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.about-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.about-content p {
+    font-size: 16px;
+    margin: 20px 0 40px;
+}
+
+.btn {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 48px;
+    background: yellowgreen;
+    border-radius: 40px;
+    font-size: 19px;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+}
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    inset: 0;
+    background: linear-gradient(45deg, #f06,#3cf, #f06);
+    z-index: -1;
+    border-radius: 40px;
+    background-size: 200%;
+    background-position: 0 0;
+    z-index: -1;
+    border-radius: 40px;
+    filter: blur(5px);
+    transition: .5s ease;
+}
+
+.btn:hover::before {
+    background-position: 100% 0;
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    inset: 0;
+    background: linear-gradient(45deg, #f06,#3cf, #f06);
+    background-position: 0 0;
+    z-index: -1;
+    border-radius: 40px;
+    background-size: 200%;
+    transition: .5s ease;
+}
+
+.btn:hover::after {
+    background: 100% 0;
+
+}
+
+.about-img {
+    width: 410px;
+    height: 410px;
+}
+
+.about-img .glowing-circle {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-img .glowing-circle::after {
+    content: '';
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    background-color: #0c1022;
+    border-radius: 50%;
+}
+
+.glowing-circle span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#f06, #3cf);
+    border-radius: 50%;
+}
+
+.glowing-circle .image {
+    position: relative;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.image img {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 350px;
+    object-fit: cover;
+}
+#Contact{
+    background-repeat: no-repeat;
+    background-size: 100%;
+     color: rgb(0, 0, 0);
+     text-shadow:  0 0 10px #9af0cf,0 0 20px rgb(162, 236, 162), 0 0 42px rgb(140, 231, 163);
+     font-size: 20px;
+
+}
+.contact {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 10% 0;
+}
+
+.contact-content {
+    max-width: 600px;
+}
+
+.contact-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.contact-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.contact-content p {
+    font-size: 16px;
+    margin: 20px 0 40px;
+}
+
+.btn {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 48px;
+    background: yellowgreen;
+    border-radius: 40px;
+    font-size: 19px;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+}
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    inset: 0;
+    background: linear-gradient(45deg, #f06,#3cf, #f06);
+    z-index: -1;
+    border-radius: 40px;
+    background-size: 200%;
+    background-position: 0 0;
+    z-index: -1;
+    border-radius: 40px;
+    filter: blur(5px);
+    transition: .5s ease;
+}
+
+.btn:hover::before {
+    background-position: 100% 0;
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    inset: 0;
+    background: linear-gradient(45deg, #f06,#3cf, #f06);
+    background-position: 0 0;
+    z-index: -1;
+    border-radius: 40px;
+    background-size: 200%;
+    transition: .5s ease;
+}
+
+.btn:hover::after {
+    background: 100% 0;
+
+}
+
+.about-imgs {
+    width: 410px;
+    height: 410px;
+}
+
+.about-imgs .glowing-circles {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-imgs .glowing-circles::after {
+    content: '';
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    background-color: #0c1022;
+    border-radius: 50%;
+}
+
+.glowing-circles span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#f06, #3cf);
+    border-radius: 50%;
+}
+
+.glowing-circles .image {
+    position: relative;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.image img {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 350px;
+    object-fit: cover;
+}
